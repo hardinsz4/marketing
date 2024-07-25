@@ -59,3 +59,45 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const owner = document.getElementById('owner').value;
+    const password = document.getElementById('password').value;
+
+    const validOwner = 'myOwner';  // Replace with your desired owner
+    const validPassword = 'myPassword';  // Replace with your desired password
+
+    if (owner === validOwner && password === validPassword) {
+        alert('Login successful');
+        // Redirect to another page or perform other actions on successful login
+    } else {
+        alert('Invalid owner or password');
+    }
+});
+
